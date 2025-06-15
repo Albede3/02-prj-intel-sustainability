@@ -1,1 +1,146 @@
 /* Add your CSS here */
+
+/* Hero Section Styles */
+header {
+  /* Intel blue background */
+  background-color: #0071c5;
+  /* Add space above and below the content */
+  padding: 40px 0;
+  /* Center the text and items */
+  text-align: center;
+  /* Make text color white for contrast */
+  color: #fff;
+}
+
+/* Logo image styling */
+header img {
+  /* Set a max width so the logo isn't too big */
+  max-width: 120px;
+  /* Add some space below the logo */
+  margin-bottom: 20px;
+}
+
+/* Main headline styling */
+header h1 {
+  /* Make the headline bigger */
+  font-size: 2.2em;
+  /* Add some space below the headline */
+  margin-bottom: 15px;
+  /* Bold text for emphasis */
+  font-weight: bold;
+}
+
+/* Subheading / description styling */
+header p {
+  /* Slightly larger text for readability */
+  font-size: 1.1em;
+  /* Add space below the subheading */
+  margin-bottom: 0;
+  /* Lighter font weight for contrast with headline */
+  font-weight: 400;
+}
+
+/* Timeline Section Styles */
+section {
+  /* Flexbox for horizontal scrolling on large screens */
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  /* Add some padding around the timeline */
+  padding: 20px;
+  /* Background color for contrast */
+  background-color: #f4f4f4;
+  /* Space between cards */
+  gap: 20px;
+  /* Enable horizontal scroll snapping */
+  scroll-snap-type: x mandatory;
+}
+
+/* Milestone Card Styles */
+section div {
+  /* Flexbox for vertical alignment inside cards */
+  display: flex;
+  flex-direction: column;
+  /* Fixed width for consistent card size */
+  width: 250px;
+  /* Padding inside the card */
+  padding: 15px;
+  /* White background for contrast */
+  background-color: #fff;
+  /* Rounded corners for a modern look */
+  border-radius: 8px;
+  /* Subtle shadow for depth */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Transition for hover effect */
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* Snap each card to the start of the viewport */
+  scroll-snap-align: start;
+}
+
+/* Card hover effect */
+section div:hover {
+  /* Slightly enlarge the card */
+  transform: scale(1.05) rotate(1deg);
+  /* More prominent shadow on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Card heading styles */
+section div h2 {
+  /* Intel blue for year headings */
+  color: #0071c5;
+  /* Larger font size for emphasis */
+  font-size: 1.5em;
+  /* Add space below the year */
+  margin-bottom: 5px;
+}
+
+section div h3 {
+  /* Darker text for subheadings */
+  color: #333;
+  /* Add space below the subheading */
+  margin-bottom: 10px;
+}
+
+/* Card image styles */
+section div img {
+  /* Full width of the card */
+  width: 100%;
+  /* Rounded corners to match card */
+  border-radius: 5px;
+  /* Add space below the image */
+  margin-bottom: 10px;
+}
+
+/* Card paragraph styles */
+section div p {
+  /* Hide text */
+  display: none;
+  /* Smooth transition for visibility */
+  transition: opacity 0.3s ease;
+  /* Ensure space is reserved for smooth layout */
+  opacity: 0;
+}
+
+/* Reveal details on hover */
+section div:hover p {
+  /* Show text */
+  display: block;
+  /* Fade in effect */
+  opacity: 1;
+}
+
+/* Responsive Design: Stack cards vertically on smaller screens */
+@media (max-width: 768px) {
+  section {
+    /* Stack cards vertically */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  section div {
+    /* Full width for smaller screens */
+    width: 100%;
+    max-width: 300px;
+  }
+}
